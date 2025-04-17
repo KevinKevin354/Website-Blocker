@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Website Blocker",
+  "version": "1.0",
+  "description": "Blockiert bestimmte Seiten außer an zufälligen freien Tagen.",
+  "permissions": ["storage", "declarativeNetRequest", "tabs", "alarms"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "favicon/favicon-16x16.png",
+      "32": "favicon/favicon-32x32.png"
+    }
+  },
+  "icons": {
+    "16": "favicon/favicon-16x16.png",
+    "32": "favicon/favicon-32x32.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["blocked.html", "favicon/*.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

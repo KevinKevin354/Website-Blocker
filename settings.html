@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Einstellungen</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>⚙️ Einstellungen</h1>
+    <div class="tabs">
+      <button id="tabFreeDays" class="tab active">🎉 Freie Tage</button>
+      <button id="tabBlockedSites" class="tab">🚫 Blockierte Seiten</button>
+    </div>
+
+    <div id="freeDaysTab" class="tab-content active">
+      <label for="freeDaysCount">Freie Tage pro Woche:</label>
+      <select id="freeDaysCount">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+      </select>
+      <button id="saveFreeDays">💾 Speichern</button>
+    </div>
+
+    <div id="blockedSitesTab" class="tab-content">
+      <ul id="blockedSitesList"></ul>
+      <label for="newBlockedSite">Neue Domain blockieren:</label>
+      <input type="text" id="newBlockedSite" placeholder="z. B. example.com" />
+      <button id="addBlockedSite">➕ Hinzufügen</button>
+    </div>
+  </div>
+  <script src="settings.js"></script>
+</body>
+
+</html>
